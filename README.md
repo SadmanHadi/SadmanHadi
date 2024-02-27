@@ -2,7 +2,7 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Sharif Hadi Mahatab
 ===========================================================================================================================================
 
-Student
+An undergraduate student of CSE Department
 -------
 
 Hello Cuties, this is Hadi, known as ScarYPumpkiN. Professional Valorant Player & Streamer and was in gaming since 2015 I'm from Bangladesh, I am 23 and a student, Played Fortnite, Apex Legends, Rainbow Six Siege, Black Squad, CSGO and more. Now I love to chill and play games.
