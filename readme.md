@@ -47,7 +47,7 @@ I am a passionate **CSE undergraduate** from Dhaka, Bangladesh, balancing the wo
   <table style="border: none; border-collapse: collapse;">
     <tr style="border: none;">
       <th style="border: none; padding: 10px;">Discord</th>
-      <th style="border: none; padding: 10px;">Steam</th>
+      <th style="border: none; padding: 10px;">Game Profile</th>
     </tr>
     <tr style="border: none;">
       <td align="center" style="border: none; padding: 10px;">
@@ -64,11 +64,21 @@ I am a passionate **CSE undergraduate** from Dhaka, Bangladesh, balancing the wo
   </table>
   <br />
   <p align="center">
-    <a href="https://konect.gg/pumpkin"><img src="https://skillicons.dev/icons?i=linktree" width="40" /></a>
-    <a href="https://www.facebook.com/hadi.sadman"><img src="https://skillicons.dev/icons?i=fb" width="40" /></a>
-    <a href="http://www.instagram.com/pumpkinx_x"><img src="https://skillicons.dev/icons?i=instagram" width="40" /></a>
-    <a href="https://www.youtube.com/@pumpkinstream007"><img src="https://skillicons.dev/icons?i=youtube" width="40" /></a>
-    <a href="https://www.twitch.tv/pumpkinstream"><img src="https://skillicons.dev/icons?i=twitch" width="40" /></a>
+    <a href="https://konect.gg/pumpkin" target="_blank">
+      <img src="https://img.shields.io/badge/Konect-pumpkin-0891b2?style=for-the-badge&logo=linktree&logoColor=white" alt="Konect" />
+    </a>
+    <a href="https://www.facebook.com/hadi.sadman" target="_blank">
+      <img src="https://img.shields.io/badge/Facebook-hadi.sadman-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
+    </a>
+    <a href="http://www.instagram.com/pumpkinx_x" target="_blank">
+      <img src="https://img.shields.io/badge/Instagram-pumpkinx__x-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+    </a>
+    <a href="https://www.youtube.com/@pumpkinstream007" target="_blank">
+      <img src="https://img.shields.io/badge/YouTube-pumpkinstream007-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+    </a>
+    <a href="https://www.twitch.tv/pumpkinstream" target="_blank">
+      <img src="https://img.shields.io/badge/Twitch-pumpkinstream-9146FF?style=for-the-badge&logo=twitch&logoColor=white" alt="Twitch" />
+    </a>
   </p>
 </div>
 
@@ -77,11 +87,11 @@ I am a passionate **CSE undergraduate** from Dhaka, Bangladesh, balancing the wo
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SadmanHadi&show_icons=true&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true" alt="SadmanHadi's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=SadmanHadi&show_icons=true&theme=codeSTACKr&hide_border=true&border_radius=10&include_all_commits=true&count_private=true" alt="SadmanHadi's GitHub stats" />
   <br />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=SadmanHadi&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" alt="GitHub Streak" />
   <br />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SadmanHadi&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20Languages" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SadmanHadi&layout=compact&langs_count=10&theme=codeSTACKr&hide_border=true&border_radius=10" alt="Top Languages" />
 </div>
 
 <div align="center">
