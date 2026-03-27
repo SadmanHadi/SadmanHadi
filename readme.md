@@ -28,7 +28,7 @@ I am a passionate **CSE undergraduate** from Dhaka, Bangladesh, balancing the wo
 
 - 🌍 Based in **Dhaka, Bangladesh**
 - 🎓 Studying **Computer Science & Engineering**
-- 🎮 Former competitive player in _Fortnite, Apex Legends, R6 Siege, CS:GO_
+- 🎮 Former competitive player in _Valorant, Fortnite, R6 Siege, CS:GO_
 - ⚡ Fun fact: Been in the gaming scene since 2015!
 
 ---
