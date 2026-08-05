@@ -1,254 +1,226 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="280" viewBox="0 0 800 280" fill="none">
   <defs>
     <style>
-      @keyframes gridMove {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(40px); }
+      @keyframes cyberPulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.08); opacity: 1; }
       }
-      @keyframes orbFloat1 {
-        0%, 100% { transform: translate(0px, 0px) scale(1); }
-        50% { transform: translate(40px, -25px) scale(1.2); }
+      @keyframes floatOrb1 {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(60px, -25px); }
       }
-      @keyframes orbFloat2 {
-        0%, 100% { transform: translate(0px, 0px) scale(1); }
-        50% { transform: translate(-35px, 30px) scale(1.15); }
+      @keyframes floatOrb2 {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(-50px, 30px); }
       }
-      @keyframes orbFloat3 {
-        0%, 100% { transform: translate(0px, 0px) scale(1); }
-        50% { transform: translate(25px, 35px) scale(0.85); }
+      @keyframes floatOrb3 {
+        0%, 100% { transform: translate(0px, 0px); }
+        50% { transform: translate(30px, 40px); }
       }
-      @keyframes pulseBorder {
+      @keyframes scanBeam {
+        0% { transform: translateY(-30px); opacity: 0; }
+        30% { opacity: 0.8; }
+        70% { opacity: 0.8; }
+        100% { transform: translateY(310px); opacity: 0; }
+      }
+      @keyframes barGrow {
+        0% { width: 0; }
+        100% { width: 680px; }
+      }
+      @keyframes neonBorder {
         0%, 100% { stroke: #0891b2; stroke-opacity: 0.5; }
-        50% { stroke: #9146ff; stroke-opacity: 0.95; }
+        33% { stroke: #9146ff; stroke-opacity: 0.9; }
+        66% { stroke: #ec4899; stroke-opacity: 0.7; }
       }
-      @keyframes scanSweep {
-        0% { transform: translateY(-100px); opacity: 0; }
-        50% { opacity: 0.35; }
-        100% { transform: translateY(480px); opacity: 0; }
-      }
-      @keyframes rankPulse {
-        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(8, 145, 178, 0.6)); }
-        50% { transform: scale(1.04); filter: drop-shadow(0 0 20px rgba(145, 70, 255, 0.9)); }
-      }
-      @keyframes progressShine {
-        0% { transform: translateX(-100%); }
-        100% { transform: translateX(300%); }
+      @keyframes badgeBounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
       }
 
-      .text-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace, sans-serif; font-weight: 800; font-size: 20px; fill: #ffffff; letter-spacing: 0.5px; }
-      .text-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 13px; fill: #94a3b8; }
-      .text-stat-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace, sans-serif; font-weight: 800; font-size: 22px; fill: #f8fafc; }
-      .text-stat-lbl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 12px; fill: #cbd5e1; letter-spacing: 0.5px; text-transform: uppercase; }
-      .text-badge-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 12px; fill: #f1f5f9; }
-      .text-badge-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 10px; fill: #94a3b8; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 900; font-size: 20px; fill: #ffffff; letter-spacing: 1.5px; }
+      .subtitle { font-family: 'Fira Code', -apple-system, monospace; font-weight: 600; font-size: 11px; fill: #38bdf8; letter-spacing: 1px; }
+      .stat-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 10px; fill: #94a3b8; letter-spacing: 1px; text-transform: uppercase; }
+      .stat-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 900; font-size: 24px; fill: #ffffff; }
+      .badge-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 12px; fill: #f8fafc; }
+      .badge-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 10px; fill: #64748b; }
+      .footer-txt { font-family: 'Fira Code', -apple-system, monospace; font-weight: 700; font-size: 10px; fill: #0891b2; letter-spacing: 1px; }
 
-      .grid-layer { animation: gridMove 8s linear infinite; }
-      .orb-1 { animation: orbFloat1 9s ease-in-out infinite; }
-      .orb-2 { animation: orbFloat2 11s ease-in-out infinite; }
-      .orb-3 { animation: orbFloat3 13s ease-in-out infinite; }
-      .card-border { animation: pulseBorder 4s ease-in-out infinite; }
-      .scanline { animation: scanSweep 6s ease-in-out infinite; }
-      .rank-box { transform-origin: 705px 75px; animation: rankPulse 3.5s ease-in-out infinite; }
-      .bar-shine { animation: progressShine 3s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+      .orb1 { animation: floatOrb1 9s ease-in-out infinite; }
+      .orb2 { animation: floatOrb2 11s ease-in-out infinite; }
+      .orb3 { animation: floatOrb3 13s ease-in-out infinite; }
+      .scanner { animation: scanBeam 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+      .progress-fill { animation: barGrow 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      .border-glow { animation: neonBorder 6s ease-in-out infinite; }
+      .pulse-badge { animation: badgeBounce 3s ease-in-out infinite; }
     </style>
 
-    <!-- Background Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="50%" stop-color="#0b1120" />
-      <stop offset="100%" stop-color="#06090e" />
+      <stop offset="0%" stop-color="#070b14" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#050811" />
     </linearGradient>
 
-    <!-- Card Background Gradient -->
     <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
       <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
     </linearGradient>
 
-    <!-- Glowing Accent Gradients -->
-    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0891b2" />
-      <stop offset="100%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
     </linearGradient>
-    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#9146ff" />
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
       <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
-    <linearGradient id="neonOrange" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ea580c" />
-      <stop offset="100%" stop-color="#f97316" />
-    </linearGradient>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#f59e0b" />
-    </linearGradient>
-    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0" />
-      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
-    </linearGradient>
-    <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#fbbf24" />
     </linearGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
-      <circle cx="40" cy="40" r="1" fill="#0891b2" fill-opacity="0.5" />
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <pattern id="gridPattern" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.4" />
+      <circle cx="25" cy="25" r="0.8" fill="#38bdf8" fill-opacity="0.3" />
     </pattern>
 
-    <!-- Radial blur orbs -->
-    <filter id="blurOrb" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="60" />
-    </filter>
-    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.6" />
+    <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="55" />
     </filter>
 
-    <clipPath id="cardClip">
-      <rect x="0" y="0" width="800" height="380" rx="16" />
-    </clipPath>
-    <clipPath id="barClip">
-      <rect x="30" y="325" width="740" height="8" rx="4" />
+    <clipPath id="panelClip">
+      <rect x="0" y="0" width="800" height="280" rx="16" />
     </clipPath>
   </defs>
 
-  <!-- Outer Frame with Clip -->
-  <g clip-path="url(#cardClip)">
-    <!-- Deep Space Background -->
-    <rect width="800" height="380" fill="url(#bgGrad)" />
+  <g clip-path="url(#panelClip)">
+    <rect width="800" height="280" fill="url(#bgGrad)" />
 
-    <!-- Animated Glowing Orbs in Background -->
-    <g filter="url(#blurOrb)">
-      <circle class="orb-1" cx="150" cy="80" r="100" fill="#0891b2" fill-opacity="0.25" />
-      <circle class="orb-2" cx="680" cy="220" r="120" fill="#9146ff" fill-opacity="0.22" />
-      <circle class="orb-3" cx="400" cy="350" r="90" fill="#ea580c" fill-opacity="0.18" />
+    <!-- Animated Neon Nebula Background -->
+    <g filter="url(#glowEffect)">
+      <circle class="orb1" cx="120" cy="80" r="95" fill="#0891b2" fill-opacity="0.35" />
+      <circle class="orb2" cx="680" cy="190" r="110" fill="#9146ff" fill-opacity="0.32" />
+      <circle class="orb3" cx="420" cy="140" r="85" fill="#ec4899" fill-opacity="0.22" />
     </g>
 
-    <!-- Animated Cyber Matrix Grid Layer -->
-    <rect class="grid-layer" x="-40" y="-40" width="880" height="460" fill="url(#cyberGrid)" />
+    <!-- Grid lines -->
+    <rect x="0" y="0" width="800" height="280" fill="url(#gridPattern)" />
 
-    <!-- Moving Holographic Scanline -->
-    <rect class="scanline" x="0" y="0" width="800" height="60" fill="url(#scanGrad)" />
+    <!-- Scanner Beam -->
+    <rect class="scanner" x="0" y="0" width="800" height="30" fill="url(#scanGrad)" />
 
     <!-- Header Section -->
-    <g transform="translate(30, 30)">
-      <!-- Animated Status Indicator -->
-      <circle cx="8" cy="14" r="6" fill="#10b981">
-        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
-      </circle>
-      <circle cx="8" cy="14" r="10" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.6">
-        <animate attributeName="r" values="6;14;6" dur="2s" repeatCount="indefinite" />
-        <animate attributeName="stroke-opacity" values="0.8;0;0.8" dur="2s" repeatCount="indefinite" />
-      </circle>
-
-      <text x="28" y="20" class="text-title">GITHUB INTELLIGENCE &amp; STATS</text>
-      <text x="28" y="40" class="text-sub">LIVE TELEMETRY // SadmanHadi (ScarYPumpkiN)</text>
+    <g transform="translate(30, 24)">
+      <!-- Animated Status Dot -->
+      <circle cx="6" cy="14" r="5" fill="#10b981" />
+      <circle cx="6" cy="14" r="9" fill="none" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.5" />
+      
+      <text x="24" y="16" class="title">GITHUB INTELLIGENCE &amp; STATS</text>
+      <text x="24" y="32" class="subtitle">LIVE TELEMETRY // SadmanHadi (ScarYPumpkiN)</text>
     </g>
 
-    <!-- Rank Badge Top Right -->
-    <g class="rank-box" transform="translate(640, 25)">
-      <rect width="130" height="48" rx="10" fill="#0f172a" stroke="url(#neonCyan)" stroke-width="1.5" />
-      <text x="20" y="31" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="20" fill="#38bdf8">RANK</text>
-      <text x="82" y="33" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="24" fill="#fbbf24">S+</text>
+    <!-- Top Right Rank Badge -->
+    <g transform="translate(650, 24)">
+      <g class="pulse-badge">
+        <rect width="118" height="32" rx="16" fill="#0891b2" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.5" />
+        <circle cx="18" cy="16" r="6" fill="#38bdf8" />
+        <text x="32" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="12px" fill="#ffffff" letter-spacing="1px">RANK <tspan fill="#facc15">S+</tspan></text>
+      </g>
     </g>
 
-    <!-- 4 Main Metric Glass Cards -->
-    <g transform="translate(30, 95)">
-      <!-- Card 1: Commits -->
+    <!-- Row 1: Key Metric Cards -->
+    <g transform="translate(30, 75)">
+      <!-- Card 1 -->
       <g transform="translate(0, 0)">
-        <rect width="170" height="95" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
-        <rect x="0" y="0" width="4" height="95" rx="2" fill="url(#neonCyan)" />
-        <text x="20" y="32" class="text-stat-lbl">TOTAL COMMITS</text>
-        <text x="20" y="68" class="text-stat-val">250+</text>
-        <text x="130" y="66" font-size="24">⚡</text>
+        <rect width="170" height="66" rx="10" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+        <rect x="0" y="0" width="4" height="66" rx="2" fill="#38bdf8" />
+        <text x="18" y="22" class="stat-label">TOTAL COMMITS</text>
+        <text x="18" y="52" class="stat-val">280+</text>
       </g>
 
-      <!-- Card 2: Pull Requests -->
-      <g transform="translate(190, 0)">
-        <rect width="170" height="95" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
-        <rect x="0" y="0" width="4" height="95" rx="2" fill="url(#neonPurple)" />
-        <text x="20" y="32" class="text-stat-lbl">PRS MERGED</text>
-        <text x="20" y="68" class="text-stat-val">50+</text>
-        <text x="130" y="66" font-size="24">🦈</text>
+      <!-- Card 2 -->
+      <g transform="translate(182, 0)">
+        <rect width="170" height="66" rx="10" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1" stroke-opacity="0.4" />
+        <rect x="0" y="0" width="4" height="66" rx="2" fill="#a855f7" />
+        <text x="18" y="22" class="stat-label">PRS MERGED</text>
+        <text x="18" y="52" class="stat-val">50+</text>
       </g>
 
-      <!-- Card 3: Repositories -->
-      <g transform="translate(380, 0)">
-        <rect width="170" height="95" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
-        <rect x="0" y="0" width="4" height="95" rx="2" fill="url(#neonOrange)" />
-        <text x="20" y="32" class="text-stat-lbl">REPOSITORIES</text>
-        <text x="20" y="68" class="text-stat-val">27</text>
-        <text x="130" y="66" font-size="24">📦</text>
+      <!-- Card 3 -->
+      <g transform="translate(364, 0)">
+        <rect width="170" height="66" rx="10" fill="url(#cardGrad)" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4" />
+        <rect x="0" y="0" width="4" height="66" rx="2" fill="#06b6d4" />
+        <text x="18" y="22" class="stat-label">REPOSITORIES</text>
+        <text x="18" y="52" class="stat-val">32</text>
       </g>
 
-      <!-- Card 4: Contributions Rate -->
-      <g transform="translate(570, 0)">
-        <rect width="170" height="95" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
-        <rect x="0" y="0" width="4" height="95" rx="2" fill="url(#goldGrad)" />
-        <text x="20" y="32" class="text-stat-lbl">ACHIEVEMENTS</text>
-        <text x="20" y="68" class="text-stat-val">4 BADGES</text>
-        <text x="130" y="66" font-size="24">🏆</text>
+      <!-- Card 4 -->
+      <g transform="translate(546, 0)">
+        <rect width="194" height="66" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4" />
+        <rect x="0" y="0" width="4" height="66" rx="2" fill="#f59e0b" />
+        <text x="18" y="22" class="stat-label">ACHIEVEMENTS</text>
+        <text x="18" y="52" class="stat-val" fill="#fef08a">4 BADGES</text>
       </g>
     </g>
 
-    <!-- Achievements & Badges Showcase Grid -->
-    <g transform="translate(30, 205)">
-      <!-- Badge 1: Quickdraw -->
+    <!-- Row 2: Badges / Highlights -->
+    <g transform="translate(30, 153)">
+      <!-- Badge 1 -->
       <g transform="translate(0, 0)">
-        <rect width="170" height="75" rx="10" fill="#0f172a" fill-opacity="0.8" stroke="#0891b2" stroke-width="1" />
-        <circle cx="30" cy="37" r="18" fill="#0891b2" fill-opacity="0.2" />
-        <text x="22" y="44" font-size="16">⚡</text>
-        <text x="56" y="32" class="text-badge-title">Quickdraw</text>
-        <text x="56" y="48" class="text-badge-sub">Closed in &lt;5 min</text>
+        <rect width="170" height="58" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="28" cy="29" r="16" fill="#0891b2" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1" />
+        <path d="M 28 19 L 22 30 L 27 30 L 26 39 L 34 27 L 29 27 Z" fill="#38bdf8" />
+        <text x="52" y="26" class="badge-title">Quickdraw</text>
+        <text x="52" y="42" class="badge-desc">Closed in &lt;5 min</text>
       </g>
 
-      <!-- Badge 2: YOLO -->
-      <g transform="translate(190, 0)">
-        <rect width="170" height="75" rx="10" fill="#0f172a" fill-opacity="0.8" stroke="#9146ff" stroke-width="1" />
-        <circle cx="30" cy="37" r="18" fill="#9146ff" fill-opacity="0.2" />
-        <text x="22" y="44" font-size="16">🚀</text>
-        <text x="56" y="32" class="text-badge-title">YOLO</text>
-        <text x="56" y="48" class="text-badge-sub">Merged no review</text>
+      <!-- Badge 2 -->
+      <g transform="translate(182, 0)">
+        <rect width="170" height="58" rx="8" fill="url(#cardGrad)" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="28" cy="29" r="16" fill="#7c3aed" fill-opacity="0.25" stroke="#c084fc" stroke-width="1" />
+        <path d="M 23 23 L 33 23 L 33 27 L 29 31 L 29 36 L 27 36 L 27 31 L 23 27 Z" fill="#c084fc" />
+        <text x="52" y="26" class="badge-title">YOLO</text>
+        <text x="52" y="42" class="badge-desc">Merged no review</text>
       </g>
 
-      <!-- Badge 3: Pair Extraordinaire -->
-      <g transform="translate(380, 0)">
-        <rect width="170" height="75" rx="10" fill="#0f172a" fill-opacity="0.8" stroke="#f59e0b" stroke-width="1" />
-        <circle cx="30" cy="37" r="18" fill="#f59e0b" fill-opacity="0.2" />
-        <text x="22" y="44" font-size="16">🤝</text>
-        <text x="56" y="32" class="text-badge-title">Pair Extra (Gold)</text>
-        <text x="56" y="48" class="text-badge-sub">48x Co-authored</text>
+      <!-- Badge 3 -->
+      <g transform="translate(364, 0)">
+        <rect width="170" height="58" rx="8" fill="url(#cardGrad)" stroke="#fbbf24" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="28" cy="29" r="16" fill="#d97706" fill-opacity="0.25" stroke="#fbbf24" stroke-width="1" />
+        <path d="M 23 25 C 23 22 25 20 28 20 C 31 20 33 22 33 25 C 33 28 28 36 28 36 C 28 36 23 28 23 25 Z" fill="#fbbf24" />
+        <text x="52" y="26" class="badge-title">Pair Extra (Gold)</text>
+        <text x="52" y="42" class="badge-desc">48+ Co-authored</text>
       </g>
 
-      <!-- Badge 4: Pull Shark -->
-      <g transform="translate(570, 0)">
-        <rect width="170" height="75" rx="10" fill="#0f172a" fill-opacity="0.8" stroke="#06b6d4" stroke-width="1" />
-        <circle cx="30" cy="37" r="18" fill="#06b6d4" fill-opacity="0.2" />
-        <text x="22" y="44" font-size="16">🦈</text>
-        <text x="56" y="32" class="text-badge-title">Pull Shark</text>
-        <text x="56" y="48" class="text-badge-sub">48+ PRs Merged</text>
-      </g>
-    </g>
-
-    <!-- Bottom Energy Bar & Progress Track -->
-    <g transform="translate(30, 298)">
-      <text x="0" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="11" fill="#94a3b8" letter-spacing="1px">DEV PRODUCTIVITY &amp; SYSTEM SYNC</text>
-      <text x="740" y="15" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace, sans-serif" font-weight="700" font-size="11" fill="#06b6d4">100% ONLINE</text>
-
-      <!-- Background Bar Track -->
-      <rect x="0" y="24" width="740" height="8" rx="4" fill="#1e293b" />
-
-      <!-- Active Animated Progress Bar -->
-      <g clip-path="url(#barClip)">
-        <rect x="0" y="24" width="740" height="8" rx="4" fill="url(#neonCyan)" />
-        <rect class="bar-shine" x="0" y="24" width="200" height="8" fill="url(#shineGrad)" />
+      <!-- Badge 4 -->
+      <g transform="translate(546, 0)">
+        <rect width="194" height="58" rx="8" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" />
+        <circle cx="28" cy="29" r="16" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1" />
+        <path d="M 21 29 C 24 23 32 23 35 29 C 32 35 24 35 21 29 Z" fill="#38bdf8" />
+        <circle cx="28" cy="29" r="3" fill="#ffffff" />
+        <text x="52" y="26" class="badge-title">Pull Shark (2x)</text>
+        <text x="52" y="42" class="badge-desc">48+ PRs Merged</text>
       </g>
     </g>
 
-    <!-- Outer Animated Border -->
-    <rect class="card-border" x="1" y="1" width="798" height="378" rx="15" fill="none" stroke="#0891b2" stroke-width="1.5" />
+    <!-- Footer Progress Line -->
+    <g transform="translate(30, 235)">
+      <text x="0" y="10" class="footer-txt">SYSTEM PRODUCTIVITY SYNC</text>
+      <text x="740" y="10" text-anchor="end" class="footer-txt" fill="#10b981">100% ONLINE</text>
+      
+      <!-- Progress Bar Track -->
+      <rect x="0" y="18" width="740" height="5" rx="2.5" fill="#1e293b" />
+      <rect class="progress-fill" x="0" y="18" width="740" height="5" rx="2.5" fill="url(#cyanGrad)" />
+    </g>
+
+    <!-- Outer Animated Cyber Border -->
+    <rect class="border-glow" x="1.5" y="1.5" width="797" height="277" rx="14.5" fill="none" stroke="#0891b2" stroke-width="1.8" />
   </g>
 </svg>
