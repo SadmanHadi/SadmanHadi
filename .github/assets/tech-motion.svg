@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="210" viewBox="0 0 800 210" fill="none">
+  <defs>
+    <style>
+      @keyframes orbFloat {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-30px, 20px) scale(1.15); }
+      }
+      @keyframes gridSlide {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(30px); }
+      }
+      @keyframes borderGlow {
+        0%, 100% { stroke: #0891b2; stroke-opacity: 0.4; }
+        50% { stroke: #9146ff; stroke-opacity: 0.9; }
+      }
+      .text-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 16px; fill: #ffffff; letter-spacing: 0.5px; }
+      .text-cat { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 11px; fill: #38bdf8; letter-spacing: 1px; text-transform: uppercase; }
+      .text-tag { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Fira Code', monospace, sans-serif; font-weight: 600; font-size: 12px; fill: #f1f5f9; }
+      .bg-orb { animation: orbFloat 10s ease-in-out infinite; }
+      .grid-bg { animation: gridSlide 6s linear infinite; }
+      .outer-border { animation: borderGlow 4s ease-in-out infinite; }
+    </style>
+
+    <linearGradient id="techBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#06090e" />
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <pattern id="microGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.35" />
+    </pattern>
+
+    <filter id="glowBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45" />
+    </filter>
+
+    <clipPath id="techClip">
+      <rect x="0" y="0" width="800" height="210" rx="14" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#techClip)">
+    <rect width="800" height="210" fill="url(#techBg)" />
+    
+    <g filter="url(#glowBlur)">
+      <circle class="bg-orb" cx="150" cy="100" r="80" fill="#0891b2" fill-opacity="0.22" />
+      <circle class="bg-orb" cx="650" cy="110" r="90" fill="#9146ff" fill-opacity="0.2" />
+    </g>
+
+    <rect class="grid-bg" x="-30" y="-30" width="860" height="270" fill="url(#microGrid)" />
+
+    <!-- Section Header -->
+    <g transform="translate(30, 25)">
+      <circle cx="6" cy="9" r="4" fill="#0891b2" />
+      <text x="18" y="14" class="text-title">ARSENAL &amp; CORE STACK</text>
+    </g>
+
+    <!-- Row 1: Languages -->
+    <g transform="translate(30, 60)">
+      <text x="0" y="16" class="text-cat">LANGUAGES</text>
+      <!-- Pills -->
+      <g transform="translate(130, 0)">
+        <rect width="70" height="26" rx="6" fill="url(#pillGrad)" stroke="#38bdf8" stroke-width="1" />
+        <text x="35" y="17" text-anchor="middle" class="text-tag">C / C++</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <rect width="55" height="26" rx="6" fill="url(#pillGrad)" stroke="#a855f7" stroke-width="1" />
+        <text x="27.5" y="17" text-anchor="middle" class="text-tag">C#</text>
+      </g>
+      <g transform="translate(275, 0)">
+        <rect width="60" height="26" rx="6" fill="url(#pillGrad)" stroke="#ea580c" stroke-width="1" />
+        <text x="30" y="17" text-anchor="middle" class="text-tag">Java</text>
+      </g>
+      <g transform="translate(345, 0)">
+        <rect width="75" height="26" rx="6" fill="url(#pillGrad)" stroke="#38bdf8" stroke-width="1" />
+        <text x="37.5" y="17" text-anchor="middle" class="text-tag">Python</text>
+      </g>
+      <g transform="translate(430, 0)">
+        <rect width="55" height="26" rx="6" fill="url(#pillGrad)" stroke="#6366f1" stroke-width="1" />
+        <text x="27.5" y="17" text-anchor="middle" class="text-tag">PHP</text>
+      </g>
+      <g transform="translate(495, 0)">
+        <rect width="95" height="26" rx="6" fill="url(#pillGrad)" stroke="#eab308" stroke-width="1" />
+        <text x="47.5" y="17" text-anchor="middle" class="text-tag">JavaScript</text>
+      </g>
+    </g>
+
+    <!-- Row 2: Database & Frameworks -->
+    <g transform="translate(30, 105)">
+      <text x="0" y="16" class="text-cat">DATABASES &amp; DEV</text>
+      <!-- Pills -->
+      <g transform="translate(130, 0)">
+        <rect width="70" height="26" rx="6" fill="url(#pillGrad)" stroke="#0891b2" stroke-width="1" />
+        <text x="35" y="17" text-anchor="middle" class="text-tag">MySQL</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <rect width="70" height="26" rx="6" fill="url(#pillGrad)" stroke="#ef4444" stroke-width="1" />
+        <text x="35" y="17" text-anchor="middle" class="text-tag">Oracle</text>
+      </g>
+      <g transform="translate(290, 0)">
+        <rect width="90" height="26" rx="6" fill="url(#pillGrad)" stroke="#10b981" stroke-width="1" />
+        <text x="45" y="17" text-anchor="middle" class="text-tag">Git / GitHub</text>
+      </g>
+      <g transform="translate(390, 0)">
+        <rect width="80" height="26" rx="6" fill="url(#pillGrad)" stroke="#06b6d4" stroke-width="1" />
+        <text x="40" y="17" text-anchor="middle" class="text-tag">Arduino</text>
+      </g>
+      <g transform="translate(480, 0)">
+        <rect width="85" height="26" rx="6" fill="url(#pillGrad)" stroke="#38bdf8" stroke-width="1" />
+        <text x="42.5" y="17" text-anchor="middle" class="text-tag">VS Code</text>
+      </g>
+    </g>
+
+    <!-- Row 3: Design & Media -->
+    <g transform="translate(30, 150)">
+      <text x="0" y="16" class="text-cat">DESIGN &amp; MEDIA</text>
+      <!-- Pills -->
+      <g transform="translate(130, 0)">
+        <rect width="70" height="26" rx="6" fill="url(#pillGrad)" stroke="#a855f7" stroke-width="1" />
+        <text x="35" y="17" text-anchor="middle" class="text-tag">Figma</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <rect width="95" height="26" rx="6" fill="url(#pillGrad)" stroke="#38bdf8" stroke-width="1" />
+        <text x="47.5" y="17" text-anchor="middle" class="text-tag">Photoshop</text>
+      </g>
+      <g transform="translate(315, 0)">
+        <rect width="95" height="26" rx="6" fill="url(#pillGrad)" stroke="#ea580c" stroke-width="1" />
+        <text x="47.5" y="17" text-anchor="middle" class="text-tag">Illustrator</text>
+      </g>
+      <g transform="translate(420, 0)">
+        <rect width="85" height="26" rx="6" fill="url(#pillGrad)" stroke="#9146ff" stroke-width="1" />
+        <text x="42.5" y="17" text-anchor="middle" class="text-tag">Premiere</text>
+      </g>
+    </g>
+
+    <rect class="outer-border" x="1" y="1" width="798" height="208" rx="13" fill="none" stroke="#0891b2" stroke-width="1.5" />
+  </g>
+</svg>

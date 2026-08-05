@@ -1,7 +1,7 @@
 <div align="center">
   <img src="Untitleddesign-10801080px-ezgif.com-speed.gif" width="100%" alt="ScarYPumpkiN Banner" />
   
-  <br />
+  <br /><br />
   
   <a href="https://github.com/SadmanHadi">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=0891B2&center=true&vCenter=true&width=650&lines=Hi%2C+I'm+Sharif+Hadi+Mahatab+(ScarYPumpkiN)+%F0%9F%91%8B;Undergraduate+CSE+Student+%F0%9F%8E%93;Professional+Valorant+Player+%26+Streamer+%F0%9F%8E%AE;Building+Clean%2C+Fast+%26+Creative+Code+%E2%9A%A1" alt="Typing SVG" />
@@ -36,11 +36,13 @@ I am a passionate **CSE undergraduate** from Dhaka, Bangladesh, balancing the wo
 
 ---
 
-### 🛠️ Tech Stack & Skills
+### 🛠️ Tech Stack & Arsenal
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,python,php,mysql,oracle,arduino,git,github,vscode,ps,ai,pr,figma,sketch" />
-</p>
+<div align="center">
+  <img src=".github/assets/tech-motion.svg" width="100%" alt="Tech Arsenal" />
+  <br /><br />
+  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,python,php,mysql,oracle,arduino,git,github,vscode,ps,ai,pr,figma,sketch&theme=dark" alt="Skill Icons" />
+</div>
 
 ---
 
@@ -87,33 +89,18 @@ I am a passionate **CSE undergraduate** from Dhaka, Bangladesh, balancing the wo
 
 ---
 
-### 🏆 GitHub Trophies
+### 📊 Live GitHub Intelligence & Metrics
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=SadmanHadi&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Trophies" />
+  <img src=".github/assets/stats-motion.svg" width="100%" alt="SadmanHadi GitHub Stats" />
 </div>
 
 ---
 
-### 📊 GitHub Analytics
+### 🐍 Contribution Activity Stream
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SadmanHadi&show_icons=true&theme=tokyonight&hide_border=true&border_radius=10&include_all_commits=true&count_private=true" alt="SadmanHadi's GitHub stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SadmanHadi&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub Streak" />
-  <br /><br />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SadmanHadi&layout=compact&langs_count=10&theme=tokyonight&hide_border=true&border_radius=10" alt="Top Languages" />
-</div>
-
----
-
-### 🐍 Contribution Activity
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SadmanHadi/SadmanHadi/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SadmanHadi/SadmanHadi/output/github-contribution-grid-snake.svg">
-    <img alt="github-snake" src="https://raw.githubusercontent.com/SadmanHadi/SadmanHadi/output/github-contribution-grid-snake-dark.svg" width="100%" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/SadmanHadi/SadmanHadi/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Snake" />
 </div>
 
 ---
